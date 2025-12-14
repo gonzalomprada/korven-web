@@ -11,8 +11,10 @@ import FAQ from './components/FAQ';
 import Contact from './components/Contact';
 import Background from './components/Background';
 import UXFloating from './components/UXFloating';
-// Importa el nuevo componente
 import SmoothScrolling from './components/SmoothScrolling';
+import UseCases from './components/UseCases';
+import Industries from './components/Industries';
+import Manifesto from './components/Manifesto';   
 
 function App() {
   return (
@@ -28,6 +30,9 @@ function App() {
           <SocialProof />
           <About />
           <Services />
+          <UseCases />
+          <Industries />
+          <Manifesto /> 
           <EngagementModels />
           <ComparisonTable />
           <TechStack />
