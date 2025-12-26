@@ -30,13 +30,12 @@ const EngagementModels = () => {
   return (
     <section className="py-24 relative">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-20">
+        <div className="text-center mb-24">
           <h2 className="text-3xl font-bold text-white mb-4">Modelos de Trabajo</h2>
           <p className="text-slate-400">Flexibilidad para adaptarse a tu etapa actual.</p>
         </div>
 
-        {/* CAMBIO CLAVE: 'items-center' para que se alineen al centro verticalmente. 
-            La tarjeta del medio será naturalmente más alta y sobresaldrá. */}
+        {/* items-center es clave para que crezca hacia arriba y abajo por igual */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
           {models.map((model, index) => (
             <MagicCard
@@ -45,39 +44,46 @@ const EngagementModels = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className={`flex flex-col relative transition-all duration-300 ${
+              className={`flex flex-col relative transition-all duration-500 ${
                 model.highlight 
-                  ? 'p-8 border-cyan-500/50 shadow-[0_0_40px_rgba(6,182,212,0.15)] bg-cyan-900/10 z-10 scale-105' // scale-105 la hace un pelín más grande en general
-                  : 'p-6 border-white/10 hover:border-white/20 bg-white/5 scale-100'
+                  // DESTACADA: Escala 115%, Sombra fuerte, Fondo más visible, Z-index alto
+                  ? 'p-8 border-cyan-500 shadow-[0_0_60px_rgba(6,182,212,0.3)] bg-cyan-950/30 z-20 md:scale-110 lg:scale-115' 
+                  // NORMALES: Un poco más tenues para que contraste la del medio
+                  : 'p-6 border-white/5 bg-white/[0.02] hover:bg-white/5 md:scale-95 opacity-80 hover:opacity-100 z-0'
               }`}
             >
-              {/* Lógica del Cartel y Espaciado */}
+              {/* CARTEL: Posición absoluta centrada arriba */}
               {model.highlight ? (
-                // CAMBIO: 'w-max mx-auto' hace que el ancho se ajuste al texto y se centre.
-                <div className="absolute -top-4 left-0 right-0 w-max mx-auto bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg">
+                <div className="absolute -top-5 left-0 right-0 w-max mx-auto bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest shadow-[0_0_20px_rgba(6,182,212,0.4)]">
                   Más Popular
                 </div>
               ) : null}
 
-              {/* Ajuste de margen superior para compensar visualmente si es necesario */}
-              <div className={model.highlight ? "mt-4" : ""}>
-                <h3 className="text-2xl font-bold text-white text-center">{model.title}</h3>
-                <p className="text-cyan-400 text-sm font-medium mb-4 text-center">{model.subtitle}</p>
-                <p className="text-slate-400 mb-8 text-sm leading-relaxed text-center">{model.desc}</p>
+              {/* Contenido */}
+              <div className={model.highlight ? "mt-2" : ""}>
+                <h3 className={`font-bold text-white text-center mb-1 ${model.highlight ? "text-3xl" : "text-2xl"}`}>
+                  {model.title}
+                </h3>
+                <p className="text-cyan-400 text-sm font-medium mb-6 text-center tracking-wide uppercase opacity-90">
+                  {model.subtitle}
+                </p>
+                <p className="text-slate-400 mb-8 text-sm leading-relaxed text-center min-h-[60px]">
+                  {model.desc}
+                </p>
 
                 <ul className="space-y-4 mb-8">
                   {model.features.map((feature, i) => (
                     <li key={i} className="flex items-start text-sm text-slate-300">
-                      <Check className="h-5 w-5 text-cyan-500 mr-3 flex-shrink-0" />
+                      <Check className={`h-5 w-5 mr-3 flex-shrink-0 ${model.highlight ? "text-cyan-400" : "text-slate-500"}`} />
                       <span>{feature}</span>
                     </li>
                   ))}
                 </ul>
 
-                <a href="#contact" className={`block w-full py-3 px-6 rounded-lg text-center font-medium transition-all ${
+                <a href="#contact" className={`block w-full py-4 rounded-xl text-center font-bold text-sm tracking-wide transition-all ${
                   model.highlight
-                    ? 'bg-cyan-600 hover:bg-cyan-500 text-white shadow-lg hover:shadow-cyan-500/30'
-                    : 'bg-white/10 hover:bg-white/20 text-white border border-white/10'
+                    ? 'bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white shadow-lg hover:shadow-cyan-500/25 scale-105'
+                    : 'bg-white/5 hover:bg-white/10 text-white border border-white/5'
                 }`}>
                   Consultar
                 </a>
