@@ -29,14 +29,15 @@ const models = [
 const EngagementModels = () => {
   return (
     <section className="py-24 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* CAMBIO 1: Reduje max-w-7xl a max-w-5xl para que las tarjetas sean más angostas */}
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
           <h2 className="text-3xl font-bold text-white mb-4">Modelos de Trabajo</h2>
           <p className="text-slate-400">Flexibilidad para adaptarse a tu etapa actual.</p>
         </div>
 
-        {/* Usamos items-start para que la traslación negativa no afecte la alineación superior de las otras */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+        {/* Grid con gap ajustado */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
           {models.map((model, index) => (
             <MagicCard
               key={index}
@@ -44,21 +45,20 @@ const EngagementModels = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              // Clases dinámicas para el estilo y la posición
-              className={`p-8 flex flex-col h-full transition-transform duration-300 ${
+              // CAMBIO 2: Aumenté la elevación a -translate-y-8 para que suba más
+              className={`p-6 flex flex-col h-full transition-transform duration-300 ${
                 model.highlight 
-                  ? 'border-cyan-500/50 shadow-[0_0_40px_rgba(6,182,212,0.15)] bg-cyan-900/10 md:-translate-y-4 z-10 relative' // Elevación, sombra y z-index para la destacada
+                  ? 'border-cyan-500/50 shadow-[0_0_40px_rgba(6,182,212,0.15)] bg-cyan-900/10 md:-translate-y-8 z-10 relative' 
                   : 'border-white/10 hover:border-white/20 bg-white/5'
               }`}
             >
-              {/* Lógica del cartel y el espaciador */}
               {model.highlight ? (
-                // Cartel "MÁS POPULAR" con diseño original, centrado y con margen inferior
+                // El cartel ahora tiene espacio asegurado con mb-6
                 <div className="self-center mb-6 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg">
                   Más Popular
                 </div>
               ) : (
-                // Espaciador invisible para alinear los títulos de las otras tarjetas
+                // Espaciador invisible más alto para compensar y alinear títulos
                 <div className="h-8 mb-6"></div> 
               )}
 
