@@ -33,7 +33,7 @@ const Manifesto = () => {
           >
             <h2 className="text-5xl font-extrabold text-white mb-6 leading-tight">
               El Manifiesto <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Korven.</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Gonerus.</span>
             </h2>
             <p className="text-xl text-slate-300 leading-relaxed">
               Nacimos como respuesta a las agencias tradicionales lentas y burocráticas. Creemos en una ingeniería de software que sea ágil, transparente y, sobre todo, rentable para quien la contrata.
