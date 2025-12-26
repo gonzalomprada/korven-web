@@ -28,7 +28,7 @@ const UseCases = () => {
     <section id="use-cases" className="py-24 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-white mb-4">Problemas Reales, Soluciones Korven</h2>
+          <h2 className="text-3xl font-bold text-white mb-4">Problemas Reales, Soluciones Gonerus</h2>
           <p className="text-slate-400">Así es como transformamos cuellos de botella en ventajas competitivas.</p>
         </div>
 
