@@ -32,7 +32,7 @@ const Navbar = () => {
             <img 
               src={logoGonerus} 
               alt="Gonerus Logo" 
-              className="h-22 w-auto object-contain" /* Ajusta h-10 (altura) según necesites */
+              className="h-18 w-auto object-contain" /* Ajusta h-10 (altura) según necesites */
             />
           </div>
 
