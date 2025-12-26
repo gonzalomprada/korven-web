@@ -60,7 +60,7 @@ const EngagementModels = () => {
               ) : null}
 
               {/* Contenido */}
-              <div className={model.highlight ? "mt-2" : ""}>
+              <div className={model.highlight ? "mt-10" : ""}>
                 <h3 className={`font-bold text-white text-center mb-1 ${model.highlight ? "text-3xl" : "text-2xl"}`}>
                   {model.title}
                 </h3>
