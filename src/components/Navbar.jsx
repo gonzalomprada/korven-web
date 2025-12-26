@@ -30,7 +30,7 @@ const Navbar = () => {
             <div className="bg-blue-600 p-1.5 rounded-lg shadow-[0_0_15px_rgba(37,99,235,0.5)]">
               <Code2 className="h-6 w-6 text-white" />
             </div>
-            <span className="font-bold text-xl tracking-tight text-white">Korven</span>
+            <span className="font-bold text-xl tracking-tight text-white">Gonerus</span>
           </div>
 
           {/* --- Desktop Menu --- */}
