@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import logoGonerus from '../assets/logo-gonerus.png';
+import logoGonerus from '../assets/logo-gonerus.svg';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false); // Menú móvil
