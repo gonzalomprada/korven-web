@@ -18,7 +18,7 @@ const Contact = () => {
             </p>
             <div className="space-y-4">
               <div className="flex items-center text-slate-300">
-                <Mail className="h-5 w-5 mr-3 text-cyan-400" /> hola@korven.com
+                <Mail className="h-5 w-5 mr-3 text-cyan-400" /> ventas@gonerus.com.ar
               </div>
               <div className="flex items-center text-slate-300">
                 <MapPin className="h-5 w-5 mr-3 text-cyan-400" /> Remoto Global
@@ -46,7 +46,7 @@ const Contact = () => {
         </div>
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-slate-500 text-sm">© Korven 2024. All rights reserved.</p>
+          <p className="text-slate-500 text-sm">© Gonerus 2026. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>
