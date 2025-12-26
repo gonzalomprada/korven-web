@@ -19,7 +19,7 @@ const About = () => {
               Más que código, entregamos <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">soluciones estratégicas</span>.
             </h2>
             <p className="text-lg text-slate-300 mb-8 leading-relaxed">
-              En Korven, entendemos que la tecnología es un medio, no el fin. Nacimos para ser el socio tecnológico que las empresas modernas necesitan: ágiles, transparentes y obsesionados con la calidad.
+              En Gonerus, entendemos que la tecnología es un medio, no el fin. Nacimos para ser el socio tecnológico que las empresas modernas necesitan: ágiles, transparentes y obsesionados con la calidad.
             </p>
             <div className="space-y-4">
               {[
