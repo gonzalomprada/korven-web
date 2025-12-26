@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Menu, X, Code2, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import logoGonerus from '../assets/logo-gonerus.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false); // Menú móvil
@@ -26,11 +27,13 @@ const Navbar = () => {
         <div className="flex justify-between h-16 items-center">
           
           {/* Logo */}
-          <div className="flex-shrink-0 flex items-center gap-2 cursor-pointer">
-            <div className="bg-blue-600 p-1.5 rounded-lg shadow-[0_0_15px_rgba(37,99,235,0.5)]">
-              <Code2 className="h-6 w-6 text-white" />
-            </div>
-            <span className="font-bold text-xl tracking-tight text-white">Gonerus</span>
+          <div className="flex-shrink-0 flex items-center cursor-pointer">
+            {/* Usamos una etiqueta img normal */}
+            <img 
+              src={logoGonerus} 
+              alt="Gonerus Logo" 
+              className="h-10 w-auto object-contain" /* Ajusta h-10 (altura) según necesites */
+            />
           </div>
 
           {/* --- Desktop Menu --- */}
