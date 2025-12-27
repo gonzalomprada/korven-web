@@ -48,7 +48,7 @@ const Industries = () => {
     <section id="industries" className="py-24 relative"> 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="mb-16 md:flex md:justify-between md:items-end border-b border-white/10 pb-8">
+        <div className="mb-16 md:flex md:justify-between md:items-end border-b border-white/10 pb-8 text-center">
           <div className="max-w-2xl">
             <h2 className="text-3xl font-bold text-white mb-4">Sectores Especializados</h2>
             <p className="text-slate-400">
