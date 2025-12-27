@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { motion, useScroll, useSpring } from 'framer-motion';
-import { MessageCircle } from 'lucide-react';
+// Borré 'MessageCircle' porque ya no necesitamos el icono
 
 const UXFloating = () => {
   const { scrollYProgress } = useScroll();
@@ -17,15 +17,7 @@ const UXFloating = () => {
         className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-cyan-500 to-blue-600 origin-left z-[60]"
         style={{ scaleX }}
       />
-      <a
-      >
-        <MessageCircle className="h-7 w-7 fill-current" />
-        {/* Notificación (puntito rojo) opcional para llamar la atención */}
-        <span className="absolute top-0 right-0 -mt-1 -mr-1 flex h-3 w-3">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
-        </span>
-      </a>
+
     </>
   );
 };
