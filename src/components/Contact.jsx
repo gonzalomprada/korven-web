@@ -68,7 +68,7 @@ const Contact = () => {
             Hablemos de tu Proyecto
           </h2>
           <p className="text-slate-400 max-w-2xl mx-auto">
-            Cuéntanos qué necesitas y construyamos algo increíble.
+            Contanos qué necesitás y construyamoslo juntos.
           </p>
         </div>
 
@@ -78,18 +78,34 @@ const Contact = () => {
           <div className="space-y-8">
             <h3 className="text-2xl font-bold text-white">Canales Directos</h3>
             <p className="text-slate-400 leading-relaxed">
-              Completa el formulario para recibir una propuesta en tu correo <strong>gonzalomprada@gmail.com</strong> (cuando configuremos el forward), o escríbenos por chat.
+              Completa el formulario para recibir una propuesta en tu correo o escribinos por chat!
             </p>
 
-            <div className="flex items-center group">
-              <div className="h-12 w-12 rounded-full bg-white/5 flex items-center justify-center mr-4 border border-white/10 group-hover:border-cyan-500/50 group-hover:bg-cyan-950/30 transition-all">
+            <div className="flex items-start group">
+              <div className="h-12 w-12 rounded-full bg-white/5 flex items-center justify-center mr-4 border border-white/10 group-hover:border-cyan-500/50 group-hover:bg-cyan-950/30 transition-all flex-shrink-0">
                 <Mail className="h-5 w-5 text-slate-300 group-hover:text-cyan-400" />
               </div>
               <div>
-                <p className="text-sm text-slate-500 font-medium uppercase tracking-wider">Email</p>
-                <a href="mailto:hola@gonerus.com.ar" className="text-white hover:text-cyan-400 transition-colors font-medium">
-                  hola@gonerus.com.ar
-                </a>
+                <p className="text-sm text-slate-500 font-medium uppercase tracking-wider mb-2">Correos de Contacto</p>
+                
+                <div className="space-y-2"> {/* Lista vertical con espacio */}
+                  
+                  {/* 1. Tu Mail Principal */}
+                  <a href="mailto:gonzalomprada@gmail.com" className="block text-white hover:text-cyan-400 transition-colors font-medium">
+                    gonzalomprada@gmail.com
+                  </a> 
+
+                  {/* 2. Segundo Mail (Ejemplo: Ventas o Socio) */}
+                  <a href="mailto:August.arana.dev@gmail.com" className="block text-slate-400 hover:text-cyan-400 transition-colors">
+                    August.arana.dev@gmail.com
+                  </a>
+
+                  {/* 3. Tercer Mail (Ejemplo: Info o Soporte) */}
+                  <a href="mailto:info@gonerus.com.ar" className="block text-slate-400 hover:text-cyan-400 transition-colors">
+                    info@gonerus.com.ar
+                  </a>
+
+                </div>
               </div>
             </div>
 
