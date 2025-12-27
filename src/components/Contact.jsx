@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import { Mail, MessageCircle, Send, Loader2, ArrowRight, ChevronDown, Check } from 'lucide-react';
+import { Mail, MessageCircle, Send, Loader2, ArrowRight, ChevronDown, Check, Linkedin, Instagram } from 'lucide-react';
 
 const Contact = () => {
   const form = useRef();
@@ -127,6 +127,35 @@ const Contact = () => {
                 </div>
               </div>
             </div>
+            <div className="mt-10 pt-8 border-t border-white/10">
+              <h4 className="text-sm font-bold text-slate-500 uppercase tracking-wider mb-4">Síguenos en redes</h4>
+              
+              <div className="flex gap-4">
+                {/* LinkedIn */}
+                <a 
+                  href="https://www.linkedin.com/"
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="h-12 w-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:bg-[#0077b5] hover:border-[#0077b5] hover:text-white transition-all duration-300 group"
+                  aria-label="LinkedIn"
+                >
+                  <Linkedin className="h-5 w-5 group-hover:scale-110 transition-transform" />
+                </a>
+
+                {/* Instagram */}
+                <a 
+                  href="https://www.instagram.com/gonerus.tech?igsh=bmNqamE5bHoyMmV0&utm_source=qr" // Pon tu link real aquí
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="h-12 w-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:bg-gradient-to-tr hover:from-[#fd5949] hover:to-[#d6249f] hover:border-transparent hover:text-white transition-all duration-300 group"
+                  aria-label="Instagram"
+                >
+                  <Instagram className="h-5 w-5 group-hover:scale-110 transition-transform" />
+                </a>
+              </div>
+            </div>
+
+
           </div>
 
           {/* COLUMNA DERECHA: Formulario con EmailJS */}
