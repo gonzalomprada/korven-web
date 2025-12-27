@@ -135,7 +135,7 @@ const Contact = () => {
                   <Linkedin className="h-5 w-5 group-hover:scale-110 transition-transform" />
                 </a>
                 <a 
-                  href="https://https://www.instagram.com/gonerus.tech?igsh=bmNqamE5bHoyMmV0&utm_source=qr" 
+                  href="https://instagram.com/gonerus.tech?igsh=bmNqamE5bHoyMmV0&utm_source=qr" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="h-12 w-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:bg-gradient-to-tr hover:from-[#fd5949] hover:to-[#d6249f] hover:border-transparent hover:text-white transition-all duration-300 group"
