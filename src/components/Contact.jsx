@@ -58,10 +58,7 @@ const Contact = () => {
   return (
     // CAMBIO 1: FONDO UNIFICADO
     // Usamos un gradiente radial superior para imitar la luz del Hero
-    <section id="contact" className="py-24 relative bg-[#0a0a0a] overflow-hidden">
-      
-      {/* Efecto de luz de fondo (Glow Azul) */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-cyan-500/10 blur-[120px] rounded-full pointer-events-none" />
+    <section id="contact" className="py-24 relative bg-transparent overflow-hidden">
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
@@ -150,7 +147,7 @@ const Contact = () => {
           </div>
 
           {/* COLUMNA DERECHA: Formulario */}
-          <form ref={form} onSubmit={handleSubmit} className="space-y-5 bg-white/5 p-8 rounded-3xl border border-white/10 shadow-2xl relative">
+          <form ref={form} onSubmit={handleSubmit} className="space-y-5 bg-slate-900/40 backdrop-blur-md p-8 rounded-3xl border border-white/10 shadow-2xl relative">
             {/* ... (Lógica de éxito/error igual que antes) ... */}
             {status === 'success' && (
               <div className="absolute inset-0 bg-black/95 rounded-3xl z-20 flex flex-col items-center justify-center p-8 text-center animate-in fade-in duration-300">
