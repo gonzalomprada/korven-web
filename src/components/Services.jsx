@@ -18,7 +18,7 @@ const services = [
   {
     icon: <Zap className="h-8 w-8 text-purple-300" />,
     title: 'Automatización',
-    description: 'Bots y scripts inteligentes que trabajan 24/7 en tareas repetitivas para que tú te enfoques en crecer.'
+    description: 'Bots y scripts inteligentes que trabajan 24/7 en tareas repetitivas para que te enfoques en crecer.'
   }
 ];
 

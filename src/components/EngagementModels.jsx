@@ -20,8 +20,8 @@ const models = [
   {
     title: "Staff Augmentation",
     subtitle: "Para Equipos IT",
-    desc: "Sumamos desarrolladores senior a tu equipo actual.",
-    features: ["Dedicatoria full-time", "Sin cargas sociales", "Onboarding inmediato", "Gestión simplificada"],
+    desc: "Sumamos equipo senior a tu empresa.",
+    features: ["Dedicatoria flexible", "Sin cargas sociales", "Onboarding inmediato", "Gestión simplificada"],
     highlight: false
   }
 ];

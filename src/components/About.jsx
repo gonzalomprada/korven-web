@@ -67,7 +67,7 @@ const About = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
                 { icon: Search, title: "1. Inmersión", desc: "Analizamos tu negocio para entender el 'por qué' antes del 'cómo'." },
-                { icon: Code, title: "2. Construcción Ágil", desc: "Sprints cortos con entregables visibles cada semana. Tú tienes el control." },
+                { icon: Code, title: "2. Construcción Ágil", desc: "Sprints cortos con entregables visibles cada semana. Vos tenés el control." },
                 { icon: Rocket, title: "3. Despegue", desc: "Lanzamiento, monitoreo y soporte continuo para asegurar el éxito." }
             ].map((step, index) => (
                 <motion.div 

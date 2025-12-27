@@ -5,11 +5,11 @@ import { Plus, Minus } from 'lucide-react';
 const faqs = [
   {
     question: "¿Cómo es el proceso de presupuesto?",
-    answer: "Analizamos tus requerimientos en una reunión inicial gratuita de 30 minutos. Luego, te entregamos una propuesta detallada con tiempos y costos fijos. Sin sorpresas."
+    answer: "Analizamos tus requerimientos en una reunión inicial sin cargo de 30 minutos. Después, te entregamos una propuesta detallada con tiempos y costos fijos. Sin sorpresas."
   },
   {
     question: "¿Trabajan con empresas internacionales?",
-    answer: "Sí, Korven es una empresa remota global. Trabajamos con clientes de Latinoamérica, Europa y Estados Unidos, adaptándonos a tu zona horaria."
+    answer: "Sí, Gonerus es una empresa remota global. Trabajamos con clientes de Latinoamérica, Europa y Estados Unidos, adaptándonos a tu zona horaria."
   },
   {
     question: "¿Qué pasa después de terminar el desarrollo?",
@@ -17,7 +17,7 @@ const faqs = [
   },
   {
     question: "¿Pueden mejorar un software que ya tengo?",
-    answer: "Absolutamente. Realizamos auditorías de código y refactorización para modernizar sistemas legados (Legacy) y mejorar su rendimiento."
+    answer: "Totalmente. Realizamos auditorías de código y refactorización para modernizar sistemas legados (Legacy) y mejorar su rendimiento."
   }
 ];
 

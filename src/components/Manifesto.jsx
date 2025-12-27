@@ -5,7 +5,7 @@ import MagicCard from './MagicCard';
 const principles = [
   {
     title: "No somos 'Sí a todo'",
-    desc: "Si una funcionalidad no aporta valor real a tu negocio o pone en riesgo el proyecto, te lo diremos. Preferimos ser honestos a facturar horas inútiles."
+    desc: "Si una funcionalidad no aporta valor real a tu negocio o pone en riesgo el proyecto, te lo decimos. Preferimos ser honestos a facturar horas inútiles."
   },
   {
     title: "Código es Arte",
