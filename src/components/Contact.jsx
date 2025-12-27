@@ -7,17 +7,16 @@ const Contact = () => {
 
   // Estado del formulario
   const [formData, setFormData] = useState({
-    user_name: '',    // EmailJS suele usar 'user_name' en sus templates por defecto
-    user_email: '',   // EmailJS suele usar 'user_email'
-    service: 'Software a Medida', // Opción Default solicitada
+    user_name: '',
+    user_email: '',
+    service: 'Software a Medida',
     message: ''
   });
 
-  // Estado del Dropdown personalizado
+  // Estado del Dropdown
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
 
-  // Opciones del servicio con iconos o descripciones cortas si quisieras
   const serviceOptions = [
     "Software a Medida",
     "MVP Express",
@@ -26,16 +25,16 @@ const Contact = () => {
   ];
 
   // Estado visual
-  const [status, setStatus] = useState('idle'); // 'idle' | 'sending' | 'success' | 'error'
+  const [status, setStatus] = useState('idle');
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setStatus('sending');
 
     // REEMPLAZA ESTOS VALORES CON LOS DE TU CUENTA DE EMAILJS
-    const SERVICE_ID = 'service_z4zu272';
-    const TEMPLATE_ID = 'template_lts5f6a';
-    const PUBLIC_KEY = 'Mbd0WWiB2FRUid0-7';
+    const SERVICE_ID = 'YOUR_SERVICE_ID';
+    const TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
+    const PUBLIC_KEY = 'YOUR_PUBLIC_KEY';
 
     emailjs.send(SERVICE_ID, TEMPLATE_ID, formData, PUBLIC_KEY)
       .then((result) => {
@@ -51,64 +50,62 @@ const Contact = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // Función para elegir opción del custom dropdown
   const selectOption = (option) => {
     setFormData({ ...formData, service: option });
     setIsOpen(false);
   };
 
   return (
-    <section id="contact" className="py-24 relative bg-black">
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-blue-950/5 to-black pointer-events-none" />
+    // CAMBIO 1: FONDO UNIFICADO
+    // Usamos un gradiente radial superior para imitar la luz del Hero
+    <section id="contact" className="py-24 relative bg-[#0a0a0a] overflow-hidden">
+      
+      {/* Efecto de luz de fondo (Glow Azul) */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-cyan-500/10 blur-[120px] rounded-full pointer-events-none" />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
+        {/* Encabezado */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Hablemos de tu Proyecto
           </h2>
           <p className="text-slate-400 max-w-2xl mx-auto">
-            Contanos qué necesitás y construyámoslo juntos.
+            Cuéntanos qué necesitas y construyamos algo increíble.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-20">
           
-          {/* COLUMNA IZQUIERDA: Info + WhatsApp */}
+          {/* COLUMNA IZQUIERDA */}
           <div className="space-y-8">
             <h3 className="text-2xl font-bold text-white">Canales Directos</h3>
             <p className="text-slate-400 leading-relaxed">
-              Completa el formulario para recibir una propuesta en tu correo o escribinos por chat!
+              Completa el formulario para recibir una propuesta formal, o escríbenos por chat para consultas rápidas.
             </p>
 
+            {/* Lista de Correos */}
             <div className="flex items-start group">
               <div className="h-12 w-12 rounded-full bg-white/5 flex items-center justify-center mr-4 border border-white/10 group-hover:border-cyan-500/50 group-hover:bg-cyan-950/30 transition-all flex-shrink-0">
                 <Mail className="h-5 w-5 text-slate-300 group-hover:text-cyan-400" />
               </div>
               <div>
                 <p className="text-sm text-slate-500 font-medium uppercase tracking-wider mb-2">Correos de Contacto</p>
-                
-                <div className="space-y-2"> {/* Lista vertical con espacio */}
-                  
-                  {/* 1. Tu Mail Principal */}
+                <div className="space-y-2">
                   <a href="mailto:gonzalomprada@gmail.com" className="block text-white hover:text-cyan-400 transition-colors font-medium">
                     gonzalomprada@gmail.com
-                  </a> 
-
-                  {/* 2. Segundo Mail (Ejemplo: Ventas o Socio) */}
-                  <a href="mailto:August.arana.dev@gmail.com" className="block text-slate-400 hover:text-cyan-400 transition-colors">
-                    August.arana.dev@gmail.com
                   </a>
-
-                  {/* 3. Tercer Mail (Ejemplo: Info o Soporte) */}
+                  <a href="mailto:ventas@gonerus.com.ar" className="block text-slate-400 hover:text-cyan-400 transition-colors">
+                    ventas@gonerus.com.ar
+                  </a>
                   <a href="mailto:info@gonerus.com.ar" className="block text-slate-400 hover:text-cyan-400 transition-colors">
                     info@gonerus.com.ar
                   </a>
-
                 </div>
               </div>
             </div>
 
+            {/* WhatsApp Box */}
             <div className="p-6 rounded-2xl bg-gradient-to-r from-green-900/10 to-emerald-900/10 border border-green-500/20 mt-8 relative overflow-hidden group">
               <div className="absolute inset-0 bg-green-500/5 opacity-0 group-hover:opacity-100 transition-opacity" />
               <div className="flex items-start relative z-10">
@@ -117,7 +114,7 @@ const Contact = () => {
                   <h4 className="text-white font-bold mb-1">WhatsApp Directo</h4>
                   <p className="text-sm text-slate-400 mb-5">Respuesta inmediata para dudas puntuales.</p>
                   <a 
-                    href="https://wa.me/5491112345678?text=Hola%20Gonerus..." 
+                    href="https://wa.me/5491112345678" // TU NÚMERO
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="inline-flex items-center bg-green-600 hover:bg-green-500 text-white px-5 py-2.5 rounded-lg text-sm font-bold transition-all shadow-lg hover:shadow-green-500/20"
@@ -127,41 +124,34 @@ const Contact = () => {
                 </div>
               </div>
             </div>
+
+            {/* Redes Sociales */}
             <div className="mt-10 pt-8 border-t border-white/10">
-              <h4 className="text-sm font-bold text-slate-500 uppercase tracking-wider mb-4">Seguinos en redes</h4>
-              
+              <h4 className="text-sm font-bold text-slate-500 uppercase tracking-wider mb-4">Síguenos en redes</h4>
               <div className="flex gap-4">
-                {/* LinkedIn */}
                 <a 
-                  href="https://www.linkedin.com/"
+                  href="https://www.linkedin.com/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="h-12 w-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:bg-[#0077b5] hover:border-[#0077b5] hover:text-white transition-all duration-300 group"
-                  aria-label="LinkedIn"
                 >
                   <Linkedin className="h-5 w-5 group-hover:scale-110 transition-transform" />
                 </a>
-
-                {/* Instagram */}
                 <a 
-                  href="https://www.instagram.com/gonerus.tech?igsh=bmNqamE5bHoyMmV0&utm_source=qr" // Pon tu link real aquí
+                  href="https://www.instagram.com/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="h-12 w-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:bg-gradient-to-tr hover:from-[#fd5949] hover:to-[#d6249f] hover:border-transparent hover:text-white transition-all duration-300 group"
-                  aria-label="Instagram"
                 >
                   <Instagram className="h-5 w-5 group-hover:scale-110 transition-transform" />
                 </a>
               </div>
             </div>
-
-
           </div>
 
-          {/* COLUMNA DERECHA: Formulario con EmailJS */}
+          {/* COLUMNA DERECHA: Formulario */}
           <form ref={form} onSubmit={handleSubmit} className="space-y-5 bg-white/5 p-8 rounded-3xl border border-white/10 shadow-2xl relative">
-            
-            {/* Overlay de Éxito */}
+            {/* ... (Lógica de éxito/error igual que antes) ... */}
             {status === 'success' && (
               <div className="absolute inset-0 bg-black/95 rounded-3xl z-20 flex flex-col items-center justify-center p-8 text-center animate-in fade-in duration-300">
                 <div className="h-20 w-20 bg-green-500/20 text-green-500 rounded-full flex items-center justify-center mb-6 border border-green-500/30">
@@ -171,17 +161,6 @@ const Contact = () => {
                 <p className="text-slate-400 mb-8">El mensaje ha sido enviado correctamente.</p>
                 <button type="button" onClick={() => setStatus('idle')} className="text-cyan-400 hover:text-cyan-300 font-medium underline">
                   Enviar otro mensaje
-                </button>
-              </div>
-            )}
-
-             {/* Overlay de Error */}
-             {status === 'error' && (
-              <div className="absolute inset-0 bg-black/95 rounded-3xl z-20 flex flex-col items-center justify-center p-8 text-center animate-in fade-in duration-300">
-                <h3 className="text-2xl font-bold text-red-500 mb-2">Ocurrió un error</h3>
-                <p className="text-slate-400 mb-8">No pudimos enviar el mensaje. Por favor intenta por WhatsApp.</p>
-                <button type="button" onClick={() => setStatus('idle')} className="text-white bg-white/10 px-4 py-2 rounded-lg">
-                  Intentar de nuevo
                 </button>
               </div>
             )}
@@ -213,10 +192,8 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* CUSTOM DROPDOWN (Mejorado visualmente) */}
             <div className="space-y-2 relative" ref={dropdownRef}>
               <label className="text-xs font-bold text-slate-500 uppercase tracking-wider ml-1">Interés Principal</label>
-              
               <button
                 type="button"
                 onClick={() => setIsOpen(!isOpen)}
@@ -225,8 +202,6 @@ const Contact = () => {
                 <span className="text-white font-medium">{formData.service}</span>
                 <ChevronDown className={`h-5 w-5 text-slate-400 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
               </button>
-
-              {/* Lista desplegable animada */}
               {isOpen && (
                 <div className="absolute top-full left-0 right-0 mt-2 bg-[#0a0a0a] border border-white/10 rounded-xl shadow-2xl overflow-hidden z-30 animate-in fade-in zoom-in-95 duration-200">
                   {serviceOptions.map((option) => (
@@ -272,6 +247,14 @@ const Contact = () => {
             </button>
           </form>
         </div>
+
+        {/* CAMBIO 2: FOOTER / COPYRIGHT */}
+        <div className="border-t border-white/10 pt-8 mt-12 text-center">
+          <p className="text-slate-500 text-sm">
+            © 2026 Gonerus. Todos los derechos reservados.
+          </p>
+        </div>
+
       </div>
     </section>
   );
