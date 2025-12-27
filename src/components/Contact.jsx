@@ -68,7 +68,7 @@ const Contact = () => {
             Hablemos de tu Proyecto
           </h2>
           <p className="text-slate-400 max-w-2xl mx-auto">
-            Contanos qué necesitás y construyamoslo juntos.
+            Contanos qué necesitás y construyámoslo juntos.
           </p>
         </div>
 
