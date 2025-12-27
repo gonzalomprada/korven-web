@@ -77,12 +77,11 @@ const Contact = () => {
                 <div>
                   <h4 className="text-white font-bold mb-1">Chat Rápido</h4>
                   <p className="text-sm text-slate-400 mb-5">
-                    ¿Tienes una duda puntual? Escríbenos directamente por WhatsApp.
+                    ¿Tenés una duda puntual? Mandanos mensaje directamente por WhatsApp.
                   </p>
                   
-                  {/* REEMPLAZA EL NÚMERO AQUÍ ABAJO (Sin el +) */}
                   <a 
-                    href="https://wa.me/5491112345678?text=Hola%20Gonerus,%20quisiera%20más%20información%20sobre..." 
+                    href="https://wa.me/5491140996116?text=Hola%20Gonerus,%20quisiera%20más%20información%20sobre..." 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="inline-flex items-center bg-green-600 hover:bg-green-500 text-white px-5 py-2.5 rounded-lg text-sm font-bold transition-all shadow-lg hover:shadow-green-500/20"
@@ -106,7 +105,7 @@ const Contact = () => {
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-2">¡Recibido!</h3>
                 <p className="text-slate-400 mb-8 max-w-xs mx-auto">
-                  Gracias por contactarnos. Analizaremos tu solicitud y te responderemos en breve.
+                  Gracias por contactarnos. Vamos a analizar tu solicitud y te respondemos a la brevedad.
                 </p>
                 <button 
                   onClick={() => setStatus('idle')} 
