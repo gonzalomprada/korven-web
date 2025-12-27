@@ -48,16 +48,13 @@ const Industries = () => {
     <section id="industries" className="py-24 relative"> 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="mb-16 md:flex md:justify-between md:items-end border-b border-white/10 pb-8 text-center">
-          <div className="max-w-2xl">
+      <div className="mb-16 border-b border-white/10 pb-8 text-center">
+          {/* Agregamos mx-auto aquí para centrar esta caja de ancho limitado */}
+          <div className="max-w-2xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-4">Sectores Especializados</h2>
             <p className="text-slate-400">
               No hacemos "software genérico". Entendemos las reglas de juego de tu industria.
             </p>
-          </div>
-          <div className="hidden md:block text-right">
-             <span className="text-xs font-mono text-cyan-500 uppercase tracking-widest">
-             </span>
           </div>
         </div>
 
