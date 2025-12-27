@@ -26,14 +26,19 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           
-          {/* Logo */}
-          <div className="flex-shrink-0 flex items-center cursor-pointer">
-            {/* Usamos una etiqueta img normal */}
+          {/* LOGO AREA */}
+          <div className="flex-shrink-0 flex items-center gap-3 cursor-pointer">
+            {/* 1. El Logo (Icono) */}
             <img 
               src={logoGonerus} 
               alt="Gonerus Logo" 
-              className="h-16 w-auto object-contain" /* Ajusta h-10 (altura) según necesites */
+              className="h-10 w-auto object-contain" 
             />
+            
+            {/* 2. El Texto de la Marca */}
+            <span className="font-bold text-xl tracking-tight text-white font-sans">
+              Gonerus
+            </span>
           </div>
 
           {/* --- Desktop Menu --- */}
