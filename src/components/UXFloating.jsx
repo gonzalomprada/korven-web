@@ -17,14 +17,7 @@ const UXFloating = () => {
         className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-cyan-500 to-blue-600 origin-left z-[60]"
         style={{ scaleX }}
       />
-
-      {/* 2. Botón WhatsApp Flotante */}
       <a
-        href="https://wa.me/1234567890" // ¡Recuerda poner tu número real aquí!
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20bd5a] text-white p-3 rounded-full shadow-lg shadow-green-900/20 transition-transform hover:scale-110 flex items-center justify-center"
-        title="Contáctanos por WhatsApp"
       >
         <MessageCircle className="h-7 w-7 fill-current" />
         {/* Notificación (puntito rojo) opcional para llamar la atención */}
