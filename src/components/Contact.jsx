@@ -128,7 +128,7 @@ const Contact = () => {
               </div>
             </div>
             <div className="mt-10 pt-8 border-t border-white/10">
-              <h4 className="text-sm font-bold text-slate-500 uppercase tracking-wider mb-4">Síguenos en redes</h4>
+              <h4 className="text-sm font-bold text-slate-500 uppercase tracking-wider mb-4">Seguinos en redes</h4>
               
               <div className="flex gap-4">
                 {/* LinkedIn */}
