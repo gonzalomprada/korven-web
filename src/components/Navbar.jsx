@@ -32,7 +32,7 @@ const Navbar = () => {
             <img 
               src={logoGonerus} 
               alt="Gonerus Logo" 
-              className="h-14 w-auto object-contain" 
+              className="h-12 w-auto object-contain" 
             />
             
             {/* 2. El Texto de la Marca */}
