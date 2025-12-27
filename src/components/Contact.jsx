@@ -32,9 +32,9 @@ const Contact = () => {
     setStatus('sending');
 
     // REEMPLAZA ESTOS VALORES CON LOS DE TU CUENTA DE EMAILJS
-    const SERVICE_ID = 'YOUR_SERVICE_ID';
-    const TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
-    const PUBLIC_KEY = 'YOUR_PUBLIC_KEY';
+    const SERVICE_ID = 'service_z4zu272';
+    const TEMPLATE_ID = 'template_lts5f6a';
+    const PUBLIC_KEY = 'Mbd0WWiB2FRUid0-7';
 
     emailjs.send(SERVICE_ID, TEMPLATE_ID, formData, PUBLIC_KEY)
       .then((result) => {
@@ -68,7 +68,7 @@ const Contact = () => {
             Hablemos de tu Proyecto
           </h2>
           <p className="text-slate-400 max-w-2xl mx-auto">
-            Cuéntanos qué necesitas y construyamos algo increíble.
+            Contanos qué necesitás y construyamoslo juntos.
           </p>
         </div>
 
@@ -78,7 +78,7 @@ const Contact = () => {
           <div className="space-y-8">
             <h3 className="text-2xl font-bold text-white">Canales Directos</h3>
             <p className="text-slate-400 leading-relaxed">
-              Completa el formulario para recibir una propuesta formal, o escríbenos por chat para consultas rápidas.
+              Completa el formulario para recibir una propuesta formal, o escribinos por chat para consultas rápidas.
             </p>
 
             {/* Lista de Correos */}
@@ -92,8 +92,8 @@ const Contact = () => {
                   <a href="mailto:gonzalomprada@gmail.com" className="block text-white hover:text-cyan-400 transition-colors font-medium">
                     gonzalomprada@gmail.com
                   </a>
-                  <a href="mailto:ventas@gonerus.com.ar" className="block text-slate-400 hover:text-cyan-400 transition-colors">
-                    ventas@gonerus.com.ar
+                  <a href="mailto:August.arana.dev@gmail.com" className="block text-slate-400 hover:text-cyan-400 transition-colors">
+                    August.arana.dev@gmail.com
                   </a>
                   <a href="mailto:info@gonerus.com.ar" className="block text-slate-400 hover:text-cyan-400 transition-colors">
                     info@gonerus.com.ar
@@ -111,7 +111,7 @@ const Contact = () => {
                   <h4 className="text-white font-bold mb-1">WhatsApp Directo</h4>
                   <p className="text-sm text-slate-400 mb-5">Respuesta inmediata para dudas puntuales.</p>
                   <a 
-                    href="https://wa.me/5491112345678" // TU NÚMERO
+                    href="https://wa.me/5491140996116" // TU NÚMERO
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="inline-flex items-center bg-green-600 hover:bg-green-500 text-white px-5 py-2.5 rounded-lg text-sm font-bold transition-all shadow-lg hover:shadow-green-500/20"
@@ -124,7 +124,7 @@ const Contact = () => {
 
             {/* Redes Sociales */}
             <div className="mt-10 pt-8 border-t border-white/10">
-              <h4 className="text-sm font-bold text-slate-500 uppercase tracking-wider mb-4">Síguenos en redes</h4>
+              <h4 className="text-sm font-bold text-slate-500 uppercase tracking-wider mb-4">Seguinos en nuestras redes</h4>
               <div className="flex gap-4">
                 <a 
                   href="https://www.linkedin.com/" 
@@ -135,7 +135,7 @@ const Contact = () => {
                   <Linkedin className="h-5 w-5 group-hover:scale-110 transition-transform" />
                 </a>
                 <a 
-                  href="https://www.instagram.com/" 
+                  href="https://https://www.instagram.com/gonerus.tech?igsh=bmNqamE5bHoyMmV0&utm_source=qr" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="h-12 w-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:bg-gradient-to-tr hover:from-[#fd5949] hover:to-[#d6249f] hover:border-transparent hover:text-white transition-all duration-300 group"
@@ -155,7 +155,7 @@ const Contact = () => {
                   <Send className="h-10 w-10" />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-2">¡Recibido!</h3>
-                <p className="text-slate-400 mb-8">El mensaje ha sido enviado correctamente.</p>
+                <p className="text-slate-400 mb-8">El mensaje se envió correctamente.</p>
                 <button type="button" onClick={() => setStatus('idle')} className="text-cyan-400 hover:text-cyan-300 font-medium underline">
                   Enviar otro mensaje
                 </button>
