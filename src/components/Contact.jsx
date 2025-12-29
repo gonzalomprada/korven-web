@@ -92,11 +92,11 @@ const Contact = () => {
                   <a href="mailto:gonzalomprada@gmail.com" className="block text-white hover:text-cyan-400 transition-colors font-medium">
                     gonzalomprada@gmail.com
                   </a>
-                  <a href="mailto:August.arana.dev@gmail.com" className="block text-slate-400 hover:text-cyan-400 transition-colors">
+                  <a href="mailto:August.arana.dev@gmail.com" className="block text-white hover:text-cyan-400 transition-colors font-medium">
                     August.arana.dev@gmail.com
                   </a>
-                  <a href="mailto:info@gonerus.com.ar" className="block text-slate-400 hover:text-cyan-400 transition-colors">
-                    info@gonerus.com.ar
+                  <a href="mailto:cebagerman@gmail.com" className="block text-white hover:text-cyan-400 transition-colors font-medium">
+                    cebagerman@gmail.com
                   </a>
                 </div>
               </div>
@@ -127,7 +127,7 @@ const Contact = () => {
               <h4 className="text-sm font-bold text-slate-500 uppercase tracking-wider mb-4">Seguinos en nuestras redes</h4>
               <div className="flex gap-4">
                 <a 
-                  href="https://www.linkedin.com/" 
+                  href="https://www.linkedin.com/company/gonerus/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="h-12 w-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:bg-[#0077b5] hover:border-[#0077b5] hover:text-white transition-all duration-300 group"
